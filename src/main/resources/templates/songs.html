@@ -3,13 +3,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Songs</title>
+
+<th:block th:replace="~{fragments :: head}"></th:block>
 </head>
 <body>
 	<!-- HEADER -->
-	<header th:insert="fragments :: navigationMain"></header>
+	<header th:replace="~{fragments :: navigationMain}"></header>
 	
 	<!-- MAIN -->
-	<main>
+	<main class="container">
 		<h1>Best Songs</h1>
 		
 		<ul>

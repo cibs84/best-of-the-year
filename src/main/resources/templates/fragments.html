@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -10,18 +10,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+		<link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+		<!-- style.css -->
+		<link rel="stylesheet" th:href="@{/css/style.css}">
 	</th:block>
 	
+	<!-- Bootstrap Javascript -->
 	<div th:fragment="script">
-		<!-- 	Bootstrap Javascript -->
 		<script type="text/javascript" th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js}"></script>
 	</div>
 	
-	<nav th:fragment="navigationMain" class="container list-group">
-		<a th:href="@{/}" class="list-group-item list-group-item-action">Home</a>
-		<a th:href="@{/movies}" class="list-group-item list-group-item-action">Movies</a>
-		<a th:href="@{/songs}" class="list-group-item list-group-item-action">Songs</a>
-	</nav>
+	<header th:fragment="navigationMain" class="container">
+		<div>Best of</div>
+		<nav>
+			<a th:href="@{/}" class="">Home</a>
+			<a th:href="@{/movies}" class="">Movies</a>
+			<a th:href="@{/songs}" class="">Songs</a>
+		</nav>
+	</header>
 </body>
 </html>

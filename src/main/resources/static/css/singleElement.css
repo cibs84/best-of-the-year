@@ -1,0 +1,11 @@
+@charset "ISO-8859-1";
+
+/* MAIN */
+main img {
+	display: block;
+	width: 19rem;
+    margin: 5rem auto 1rem;
+}
+main h1.title {
+	margin: 1rem;
+}

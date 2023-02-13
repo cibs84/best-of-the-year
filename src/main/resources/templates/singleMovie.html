@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeLeaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title th:text="${movie.title}"></title>
 
-<div th:replace="fragments :: head"></div>
+<th:block th:replace="~{fragments :: head}"></th:block>
 </head>
 <body>
 	<!-- HEADER -->
-	<header th:insert="fragments :: navigationMain"></header>
+	<header th:replace="~{fragments :: navigationMain}"></header>
 	
 	<!-- MAIN -->
-	<main>
+	<main class="container">
 		<img th:alt="|cover ${movie.title}|" th:src="@{${movie.coverPath}}">
-		<h1 th:text="${movie.title}"></h1>
+		<h1 th:text="${movie.title}" class="title"></h1>
 	</main>
 	
-	<div th:replace="fragments :: script"></div>
+	<div th:replace="~{fragments :: script}"></div>
 </body>
 </html>

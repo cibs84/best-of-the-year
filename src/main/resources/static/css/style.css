@@ -1,0 +1,100 @@
+@charset "ISO-8859-1";
+
+@import "index.css";
+@import "singleElement.css";
+
+/* RESET */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style-type: none;
+}
+a {
+	text-decoration: none !important;
+	color: inherit;
+}
+img {
+	display: inline-block;
+}
+
+/* COMMON */
+
+/* HEADER */
+header {
+	display: flex;
+	align-items: center;
+	height: 4rem;
+}
+header > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 100%;
+    border: #000 1px solid;
+    border-right: none;
+}
+header nav {
+	border: 1px black solid;
+	flex-grow: 1;
+	height: 100%;
+	display: flex;
+    align-items: center;
+}
+header nav a {
+	display: inline-block;
+    text-align: center;
+    margin: 0 0.5em;
+    border: 1px black solid;
+    padding: 0.4rem 2rem;
+    border-radius: 0.5rem;
+}
+header nav a:hover {
+	color: white;
+	background: black;
+	transition: 0.3s;
+}
+
+
+/* MAIN */
+main .my_container {
+	width: 60rem;
+	margin: 0 auto;
+}
+main h1 {
+	text-align: center;
+	margin: 5rem 0 2rem;
+}
+main img.heading {
+	width: 60rem;
+	height: 20rem;
+	background-size: cover;
+	background-image: url("../img/best_of.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-top: 0;
+}
+main ul {
+	width: 40%;
+	border: solid 1px black;
+	margin: 0 auto;
+	padding: 0;
+}
+main ul li {
+	
+}
+main ul li a {
+	font-size: 2.2rem;
+	text-align: center;
+	border: 1px solid black;
+	display: block;
+    padding: 0.5rem 0;
+}
+main ul li a:hover {
+	color: white;
+	background: black;
+	transition: 0.3s;
+}

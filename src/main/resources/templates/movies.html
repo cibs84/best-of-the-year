@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>Movies</title>
+
+<th:block th:replace="~{fragments :: head}"></th:block>
 </head>
 <body>
 	<!-- HEADER -->
-	<header th:insert="fragments :: navigationMain"></header>
+	<header th:replace="~{fragments :: navigationMain}"></header>
 	
 	<!-- MAIN -->
-	<main>
+	<main class="container">
 		<h1>Best Movies</h1>
 		<ul>
 			<li th:each="movie : ${bestMovies}">
@@ -17,5 +19,7 @@
 			</li>
 		</ul>
 	</main>
+	
+	<div th:replace="~{fragments :: script}"></div>
 </body>
 </html>

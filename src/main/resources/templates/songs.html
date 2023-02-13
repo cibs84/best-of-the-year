@@ -5,6 +5,18 @@
 <title>Songs</title>
 </head>
 <body>
-	<h1 th:text="${songs}" />
+	<!-- HEADER -->
+	<header th:insert="fragments :: navigationMain"></header>
+	
+	<!-- MAIN -->
+	<main>
+		<h1>Best Songs</h1>
+		
+		<ul>
+			<li th:each="song : ${bestSongs}">
+				<a th:text="${song.title}" th:href="@{|/songs/${song.id}|}"></a>
+			</li>
+		</ul>
+	</main>
 </body>
 </html>

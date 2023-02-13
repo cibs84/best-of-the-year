@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<th:block th:fragment="head" >
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+	</th:block>
+	
+	<div th:fragment="script">
+		<!-- 	Bootstrap Javascript -->
+		<script type="text/javascript" th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js}"></script>
+	</div>
+	
+	<nav th:fragment="navigationMain" class="container list-group">
+		<a th:href="@{/}" class="list-group-item list-group-item-action">Home</a>
+		<a th:href="@{/movies}" class="list-group-item list-group-item-action">Movies</a>
+		<a th:href="@{/songs}" class="list-group-item list-group-item-action">Songs</a>
+	</nav>
+</body>
+</html>

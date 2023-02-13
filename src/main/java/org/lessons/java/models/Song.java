@@ -3,10 +3,12 @@ package org.lessons.java.models;
 public class Song {
 	private int id;
 	private String title;
+	private String coverPath;
 	
-	public Song(int id, String title) {
+	public Song(int id, String title, String coverFileName) {
 		this.id = id;
 		this.title = title;
+		this.coverPath = "/img/song_covers/" + coverFileName;
 	}
 
 	public int getId() {
@@ -23,6 +25,14 @@ public class Song {
 
 	public void setTitle(String title) {
 		this.title = title;
+	}
+	
+	public String getCoverPath() {
+		return coverPath;
+	}
+
+	public void setCoverPath(String coverPath) {
+		this.coverPath = coverPath;
 	}
 
 	@Override

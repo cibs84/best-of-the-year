@@ -2,19 +2,19 @@
 <html xmlns:th="http://www.thymeLeaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Homepage</title>
+<title th:text="${movie.title}"></title>
 
 <div th:replace="fragments :: head"></div>
 </head>
 <body>
 	<!-- HEADER -->
 	<header th:insert="fragments :: navigationMain"></header>
-
+	
 	<!-- MAIN -->
 	<main>
-		<h1 th:text="'Best of the year by ' + ${nome}" />
+		<img th:alt="|cover ${movie.title}|" th:src="@{${movie.coverPath}}">
+		<h1 th:text="${movie.title}"></h1>
 	</main>
-	
 	
 	<div th:replace="fragments :: script"></div>
 </body>
